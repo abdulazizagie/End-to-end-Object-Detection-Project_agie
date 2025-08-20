@@ -1,3 +1,4 @@
+# Current entries
 .github/
 .jenkins/
 assignments/
@@ -7,3 +8,122 @@ artifacts/
 logs/
 notebooks/
 venv/
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Large data files (common in ML projects)
+*.pkl
+*.h5
+*.hdf5
+*.weights
+*.model
+*.ckpt
+*.pth
+*.pt
+data/
+dataset/
+datasets/
+models/
+checkpoints/
+weights/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+.tmp/
+
+# Documentation and README files (if not needed in container)
+README.md
+*.md
+
+# Configuration files that shouldn't be in container
+.gitconfig
+.dockerignore
+Dockerfile*
+docker-compose*.yml
+
+# Testing directories
+tests/
+test/
+.pytest_cache/
+
+# Linting and formatting
+.flake8
+.pylint
+.mypy_cache/
+.black
+.isort.cfg
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Package management
+poetry.lock
+Pipfile.lock
+requirements-dev.txt
+
+# CI/CD files
+.travis.yml
+.circleci/
+.gitlab-ci.yml
+azure-pipelines.yml
+buildspec.yml
+
+# Local development scripts
+scripts/dev/
+scripts/local/
+docker-compose.dev.yml
+docker-compose.override.yml
