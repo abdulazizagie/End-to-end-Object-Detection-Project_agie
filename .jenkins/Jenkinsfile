@@ -29,9 +29,8 @@ pipeline {
     stage('Build Image') {
       steps {
         script {
-          sh 'docker build -t ${ECR_REPOSITORY}:latest .'
+          sh 'docker build -t ${ECR_REPOSITORY}:latest . || echo "Build failed" && exit 1'
         }
-
       }
     }
 
