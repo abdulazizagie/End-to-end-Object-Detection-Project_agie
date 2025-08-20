@@ -3,7 +3,8 @@ FROM python:3.10.6-slim-buster
 # Update APT sources to use archives for EOL Buster
 RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list && \
     echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
-    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until && \
+    echo 'Acquire::Max-FutureTime 86400;' >> /etc/apt/apt.conf.d/99no-check-valid-until
 
 # Install AWS CLI v2
 RUN apt-get update && \
